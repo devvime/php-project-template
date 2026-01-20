@@ -1,0 +1,23 @@
+{
+    "name": "devvime/php-project-template",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "create:migration": "vendor/bin/phinx create",
+        "create:seed": "vendor/bin/phinx seed:create",
+        "migrate": "vendor/bin/phinx migrate",
+        "migrate:seed": "vendor/bin/phinx seed:run",
+        "rollback": "vendor/bin/phinx rollback",
+        "rollback:step": "vendor/bin/phinx rollback -t 0"
+    },
+    "license": "MIT",
+    "require": {
+        "devvime/modularis": "^1.0",
+        "vlucas/phpdotenv": "^5.6",
+        "robmorgan/phinx": "^0.16.10",
+        "devvime/php-lib": "^1.0"
+    }
+}

@@ -1,0 +1,5 @@
+<?php
+
+$argv;
+
+system("php -S localhost:{$argv[1]} -t public");

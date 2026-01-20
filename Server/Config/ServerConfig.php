@@ -1,5 +1,7 @@
 <?php
 
+use ModPath\Helpers\RateLimit;
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
@@ -9,6 +11,12 @@ try {
 } catch (\Exception $error) {
     error_log(".env not found");
     echo json_encode(["error" => ".env not found"]);
+    exit;
+}
+
+$_ENV['VIEWS_DIR'] = dirname(__DIR__, 2) . '/App/Views/';
+
+if (!RateLimit::execute(host: $_ENV['REDIS_HOST'], port: $_ENV['REDIS_PORT'], maxRequests: 15)) {
     exit;
 }
 

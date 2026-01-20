@@ -1,11 +1,12 @@
 <?php
 
-use Modularis\Router;
+use ModPath\Router\Router;
+use App\Controllers\ViewController;
 
 $router = new Router();
 
-$router->get('/', function ($request, $response) {
-    $response->render('Hello World!');
-});
+$router->registerRoutes([
+    ViewController::class,
+]);
 
 $router->dispatch();

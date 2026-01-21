@@ -1,7 +1,9 @@
 import Alpine from "alpinejs";
 
-import Counter from "./components/counter.js";
+import Home from "./pages/home.js";
+import Login from "./pages/login.js";
 
-Alpine.data("counter", Counter);
+Alpine.data("home", Home);
+Alpine.data("login", Login);
 
 Alpine.start();

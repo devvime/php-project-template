@@ -1,1 +1,25 @@
+* {
+  background-color: #222;
+  color: #eee;
+}
 
+.login-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-section .login {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+.login-section .login .signin-form {
+  width: 100%;
+}
+.login-section .login .register-form {
+  width: 100%;
+}
+
+/*# sourceMappingURL=app.css.map */

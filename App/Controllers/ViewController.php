@@ -3,17 +3,31 @@
 namespace App\Controllers;
 
 use ModPath\Attribute\Route;
+use ModPath\Http\Response;
 
 class ViewController
 {
+    public function __construct(private Response $response)
+    {
+        $this->response->render('layout/header', []);
+    }
 
     #[Route(path: '', method: 'GET')]
     public function index($request, $response)
     {
-        $response->render('layout/header', []);
-        $response->render('home', [
+        $response->render('pages/home', [
             'message' => 'Hello from ViewController!'
         ]);
-        $response->render('layout/footer', []);
+    }
+
+    #[Route(path: '/login', method: 'GET')]
+    public function login($request, $response)
+    {
+        $response->render('pages/login', []);
+    }
+
+    public function __destruct()
+    {
+        $this->response->render('layout/footer', []);
     }
 }

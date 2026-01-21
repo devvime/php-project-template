@@ -6,10 +6,10 @@
         }
     },
     "scripts": {
-        "create:migration": "vendor/bin/phinx create",
-        "create:seed": "vendor/bin/phinx seed:create",
-        "migrate": "vendor/bin/phinx migrate",
-        "migrate:seed": "vendor/bin/phinx seed:run",
+        "migration:create": "vendor/bin/phinx create",
+        "migration:run": "vendor/bin/phinx migrate",
+        "seed:create": "vendor/bin/phinx seed:create",
+        "seed:run": "vendor/bin/phinx seed:run",
         "rollback": "vendor/bin/phinx rollback",
         "rollback:step": "vendor/bin/phinx rollback -t 0"
     },

@@ -1,6 +1,10 @@
 <?php
 
-require __DIR__ . '/Config/ServerConfig.php';
+try {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__)->load();
+} catch (\Exception $error) {
+    error_log(".env not found");
+}
 
 return
     [

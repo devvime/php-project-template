@@ -1,7 +1,7 @@
 import Alpine from "alpinejs";
 
-import Home from "./pages/home.js";
-import Login from "./pages/login.js";
+import Home from "./components/home.js";
+import Login from "./components/login.js";
 
 Alpine.data("home", Home);
 Alpine.data("login", Login);

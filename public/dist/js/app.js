@@ -20,33 +20,33 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/components/home.js"
+/*!********************************!*\
+  !*** ./src/components/home.js ***!
+  \********************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\nfunction Home() {\n    return {\n        count: 0,\n        increment() {\n            this.count++;\n        },\n        decrement() {\n            if (this.count > 0) this.count--;\n        }\n    }\n}\n\n//# sourceURL=webpack:///./src/components/home.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/login.js"
+/*!*********************************!*\
+  !*** ./src/components/login.js ***!
+  \*********************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nfunction Login() {\n    return {\n        displayLoginForm: true\n    }\n}\n\n//# sourceURL=webpack:///./src/components/login.js?\n}");
+
+/***/ },
+
 /***/ "./src/main.js"
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/module.esm.js\");\n/* harmony import */ var _pages_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/home.js */ \"./src/pages/home.js\");\n/* harmony import */ var _pages_login_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/login.js */ \"./src/pages/login.js\");\n\n\n\n\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"home\", _pages_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"login\", _pages_login_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].start();\n\n//# sourceURL=webpack:///./src/main.js?\n}");
-
-/***/ },
-
-/***/ "./src/pages/home.js"
-/*!***************************!*\
-  !*** ./src/pages/home.js ***!
-  \***************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\nfunction Home() {\n    return {\n        count: 0,\n        increment() {\n            this.count++;\n        },\n        decrement() {\n            if (this.count > 0) this.count--;\n        }\n    }\n}\n\n//# sourceURL=webpack:///./src/pages/home.js?\n}");
-
-/***/ },
-
-/***/ "./src/pages/login.js"
-/*!****************************!*\
-  !*** ./src/pages/login.js ***!
-  \****************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nfunction Login() {\n    return {\n        displayLoginForm: true\n    }\n}\n\n//# sourceURL=webpack:///./src/pages/login.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/module.esm.js\");\n/* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/home.js */ \"./src/components/home.js\");\n/* harmony import */ var _components_login_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/login.js */ \"./src/components/login.js\");\n\n\n\n\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"home\", _components_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"login\", _components_login_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].start();\n\n//# sourceURL=webpack:///./src/main.js?\n}");
 
 /***/ }
 

@@ -14,7 +14,7 @@ try {
     exit;
 }
 
-$_ENV['VIEWS_DIR'] = dirname(__DIR__, 2) . '/App/Views/';
+$_ENV['VIEWS_DIR'] = dirname(__DIR__, 2) . "/{$_ENV['VIEWS_DIR']}/";
 
 if (!RateLimit::execute(host: $_ENV['REDIS_HOST'], port: $_ENV['REDIS_PORT'], maxRequests: 15)) {
     exit;

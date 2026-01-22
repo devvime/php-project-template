@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/dist/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="/dist/bootstrap/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/dist/libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/libs/bootstrap/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/dist/css/app.css">
 </head>
 <body>

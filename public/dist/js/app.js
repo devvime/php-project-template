@@ -36,7 +36,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*********************************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nfunction Login() {\n    return {\n        displayLoginForm: true\n    }\n}\n\n//# sourceURL=webpack:///./src/components/login.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nfunction Login() {\n  return {\n    displayLoginForm: true,\n    loading: false,\n    loginForm: {\n      email: '',\n      password: ''\n    },\n    registerForm: {\n      name: '',\n      email: '',\n      password: ''\n    },\n    async login() {\n      this.loading = true;\n    },\n    async register() {\n      this.loading = true;\n      const response = await axios.post('/auth/register', this.registerForm);\n\n      if (response.data.success) {\n        Swal.fire({\n          title: 'Success!',\n          text: 'Registration completed successfully.',\n          icon: 'success'\n        });\n        this.displayLoginForm = true;\n        this.loading = false;\n        return\n      }\n\n      Swal.fire({\n        title: 'Error!',\n        text: 'Login failed. Please check your credentials.',\n        icon: 'error'\n      });\n\n      this.loading = false;\n    }\n  }\n}\n\n//# sourceURL=webpack:///./src/components/login.js?\n}");
 
 /***/ },
 

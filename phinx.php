@@ -3,7 +3,7 @@
 try {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__)->load();
 } catch (\Exception $error) {
-    error_log(".env not found");
+    echo ".env not found";
 }
 
 return

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3511d4bdacdeaae6a114733d79998cbf",
+    "content-hash": "a74bedbdbacbf87e72a57d672e4c5f37",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -408,33 +408,30 @@
         },
         {
             "name": "devvime/modpath",
-            "version": "v1.0.21",
+            "version": "v1.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devvime/modpath-php.git",
-                "reference": "a846fb35e635c4c04e8251833e64896649ad8532"
+                "reference": "ccfb671e520813f53500bc22ade212cd268c30a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devvime/modpath-php/zipball/a846fb35e635c4c04e8251833e64896649ad8532",
-                "reference": "a846fb35e635c4c04e8251833e64896649ad8532",
+                "url": "https://api.github.com/repos/devvime/modpath-php/zipball/ccfb671e520813f53500bc22ade212cd268c30a6",
+                "reference": "ccfb671e520813f53500bc22ade212cd268c30a6",
                 "shasum": ""
             },
             "require": {
                 "catfan/medoo": "^2.2",
                 "firebase/php-jwt": "^6.11",
+                "mustache/mustache": "^3.0",
                 "phpmailer/phpmailer": "^6.10",
                 "symfony/cache": "^7.3",
                 "symfony/rate-limiter": "^7.3",
                 "vlucas/valitron": "^1.4"
             },
-            "require-dev": {
-                "pestphp/pest": "^3.8"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Tests\\": "tests/",
                     "ModPath\\": "src/"
                 }
             },
@@ -450,9 +447,9 @@
             "description": "A Minimal and Expressive PHP Micro Routing Framework",
             "support": {
                 "issues": "https://github.com/devvime/modpath-php/issues",
-                "source": "https://github.com/devvime/modpath-php/tree/v1.0.21"
+                "source": "https://github.com/devvime/modpath-php/tree/v1.0.23"
             },
-            "time": "2025-08-29T04:36:19+00:00"
+            "time": "2026-01-22T01:24:04+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -661,6 +658,59 @@
                 }
             ],
             "time": "2025-05-28T07:37:56+00:00"
+        },
+        {
+            "name": "mustache/mustache",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "176b6b21d68516dd5107a63ab71b0050e518b7a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/176b6b21d68516dd5107a63ab71b0050e518b7a4",
+                "reference": "176b6b21d68516dd5107a63ab71b0050e518b7a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.19.3",
+                "yoast/phpunit-polyfills": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mustache\\": "src/"
+                },
+                "classmap": [
+                    "src/compat.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "support": {
+                "issues": "https://github.com/bobthecow/mustache.php/issues",
+                "source": "https://github.com/bobthecow/mustache.php/tree/v3.0.0"
+            },
+            "time": "2025-06-28T18:28:20+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

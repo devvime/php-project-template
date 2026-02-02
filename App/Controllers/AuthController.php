@@ -10,22 +10,22 @@ use App\UseCases\Auth\Register;
 #[Controller(path: '/auth')]
 class AuthController
 {
-    public function __construct(
-        protected Login $login,
-        protected Register $register
-    ) {}
+  public function __construct(
+    protected Login $login,
+    protected Register $register
+  ) {}
 
-    #[Route(path: '/login', method: 'POST')]
-    public function login($request, $response)
-    {
-        $result = $this->login->execute((array)$request->body);
-        return $response->json($result);
-    }
+  #[Route(path: '/login', method: 'POST')]
+  public function login($request, $response)
+  {
+    $result = $this->login->execute((array)$request->body);
+    return $response->json($result);
+  }
 
-    #[Route(path: '/register', method: 'POST')]
-    public function register($request, $response)
-    {
-        $result = $this->register->execute($request->body);
-        return $response->json($result);
-    }
+  #[Route(path: '/register', method: 'POST')]
+  public function register($request, $response)
+  {
+    $result = $this->register->execute($request->body);
+    return $response->json($result);
+  }
 }

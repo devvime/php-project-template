@@ -4,8 +4,8 @@ namespace App\UseCases\Auth;
 
 class Login
 {
-    public function execute(array $data)
-    {
-        //
-    }
+  public function execute(array $data)
+  {
+    //
+  }
 }

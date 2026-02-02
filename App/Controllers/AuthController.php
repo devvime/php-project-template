@@ -22,6 +22,13 @@ class AuthController
     return $response->json($result);
   }
 
+  #[Route(path: '/logout', method: 'GET')]
+  public function logout($request, $response)
+  {
+    $result = $this->login->logout();
+    Header('location: /login');
+  }
+
   #[Route(path: '/register', method: 'POST')]
   public function register($request, $response)
   {

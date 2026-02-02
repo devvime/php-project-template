@@ -29,3 +29,8 @@ session_set_cookie_params([
 
 session_start();
 session_regenerate_id(true);
+
+function add_template($path)
+{
+  include($_ENV['VIEWS_DIR'] . "{$path}.php");
+}

@@ -18,6 +18,8 @@
         </div>
       </div>
     </template>
-    <? add_template('pages/register') ?>
+    <template x-if="!displayLoginForm">
+      <? add_template('pages/auth/register') ?>
+    </template>
   </div>
 </section>

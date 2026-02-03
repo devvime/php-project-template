@@ -20,6 +20,26 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/components/auth/login.js"
+/*!**************************************!*\
+  !*** ./src/components/auth/login.js ***!
+  \**************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nfunction Login() {\n  return {\n    displayLoginForm: true,\n    loading: false,\n    loginForm: {\n      email: '',\n      password: ''\n    },\n    async login() {\n      if (\n        this.loginForm.email === '' ||\n        this.loginForm.password === ''\n      ) {\n        return Swal.fire({\n          title: 'Ops!',\n          text: 'Required fields are empty.',\n          icon: 'warning'\n        });\n      }\n      this.loading = true;\n      const response = await axios.post('/auth/login', this.loginForm);\n      if (response.data.token) {\n        this.loading = false;\n        return location.href = '/app';\n      }\n      Swal.fire({\n        title: 'Ops!',\n        text: response.data.message,\n        icon: 'warning'\n      });\n      this.loading = false;\n    }\n  }\n}\n\n//# sourceURL=webpack:///./src/components/auth/login.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/auth/register.js"
+/*!*****************************************!*\
+  !*** ./src/components/auth/register.js ***!
+  \*****************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Register)\n/* harmony export */ });\nfunction Register() {\n  return {\n    registerForm: {\n      name: '',\n      email: '',\n      password: ''\n    },\n    async register() {\n      if (\n        this.registerForm.name === '' ||\n        this.registerForm.email === '' ||\n        this.registerForm.password === ''\n      ) {\n        return Swal.fire({\n          title: 'Ops!',\n          text: 'Required fields are empty.',\n          icon: 'warning'\n        });\n      }\n      this.loading = true;\n      const response = await axios.post('/auth/register', this.registerForm);\n      if (response.data.success) {\n        this.displayLoginForm = true;\n        this.loading = false;\n        return Swal.fire({\n          title: 'Success!',\n          text: 'Registration completed successfully.',\n          icon: 'success'\n        });\n      }\n      Swal.fire({\n        title: 'Ops!',\n        text: 'Registration failed.',\n        icon: 'error'\n      });\n      this.loading = false;\n    }\n  };\n}\n\n//# sourceURL=webpack:///./src/components/auth/register.js?\n}");
+
+/***/ },
+
 /***/ "./src/components/home.js"
 /*!********************************!*\
   !*** ./src/components/home.js ***!
@@ -30,23 +50,13 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
-/***/ "./src/components/login.js"
-/*!*********************************!*\
-  !*** ./src/components/login.js ***!
-  \*********************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nfunction Login() {\n  return {\n    displayLoginForm: true,\n    loading: false,\n    loginForm: {\n      email: '',\n      password: ''\n    },\n    registerForm: {\n      name: '',\n      email: '',\n      password: ''\n    },\n    async login() {\n      if (this.loginForm.email === '' || this.loginForm.password === '') {\n        return Swal.fire({\n          title: 'Error!',\n          text: 'Required fields are empty.',\n          icon: 'warning'\n        });\n      }\n      this.loading = true;\n      const response = await axios.post('/auth/login', this.registerForm);\n      if (response.data.token) {\n        this.loading = false;\n        location.href = '/app';\n      }\n      Swal.fire({\n        title: 'Error!',\n        text: response.data.message,\n        icon: 'warning'\n      });\n      this.loading = false;\n    },\n    async register() {\n      if (this.registerForm.name === '' || this.registerForm.email === '' || this.registerForm.password === '') {\n        return Swal.fire({\n          title: 'Error!',\n          text: 'Required fields are empty.',\n          icon: 'warning'\n        });\n      }\n      this.loading = true;\n      const response = await axios.post('/auth/register', this.registerForm);\n      if (response.data.success) {\n        this.displayLoginForm = true;\n        this.loading = false;\n        return Swal.fire({\n          title: 'Success!',\n          text: 'Registration completed successfully.',\n          icon: 'success'\n        });\n      }\n      Swal.fire({\n        title: 'Error!',\n        text: 'Registration failed.',\n        icon: 'error'\n      });\n      this.loading = false;\n    }\n  }\n}\n\n//# sourceURL=webpack:///./src/components/login.js?\n}");
-
-/***/ },
-
 /***/ "./src/main.js"
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/module.esm.js\");\n/* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/home.js */ \"./src/components/home.js\");\n/* harmony import */ var _components_login_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/login.js */ \"./src/components/login.js\");\n\n\n\n\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"home\", _components_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"login\", _components_login_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].start();\n\n//# sourceURL=webpack:///./src/main.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/module.esm.js\");\n/* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/home.js */ \"./src/components/home.js\");\n/* harmony import */ var _components_auth_login_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/auth/login.js */ \"./src/components/auth/login.js\");\n/* harmony import */ var _components_auth_register_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/auth/register.js */ \"./src/components/auth/register.js\");\n\n\n\n\n\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"home\", _components_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"login\", _components_auth_login_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].data(\"register\", _components_auth_register_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\n\nalpinejs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].start();\n\n//# sourceURL=webpack:///./src/main.js?\n}");
 
 /***/ }
 

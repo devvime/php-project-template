@@ -19,7 +19,7 @@ class AppViewController
   public function index($request, $response)
   {
     $response->render('pages/app/home', [
-      'message' => 'Hello from DashboardViewController!'
+      'message' => 'Hello from AppViewController!'
     ]);
   }
 

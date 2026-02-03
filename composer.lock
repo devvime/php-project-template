@@ -408,16 +408,16 @@
         },
         {
             "name": "devvime/modpath",
-            "version": "v1.0.23",
+            "version": "v1.0.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devvime/modpath-php.git",
-                "reference": "ccfb671e520813f53500bc22ade212cd268c30a6"
+                "reference": "078d7aadcb0435d98c098f87f2732b5d8b00efb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devvime/modpath-php/zipball/ccfb671e520813f53500bc22ade212cd268c30a6",
-                "reference": "ccfb671e520813f53500bc22ade212cd268c30a6",
+                "url": "https://api.github.com/repos/devvime/modpath-php/zipball/078d7aadcb0435d98c098f87f2732b5d8b00efb8",
+                "reference": "078d7aadcb0435d98c098f87f2732b5d8b00efb8",
                 "shasum": ""
             },
             "require": {
@@ -447,9 +447,9 @@
             "description": "A Minimal and Expressive PHP Micro Routing Framework",
             "support": {
                 "issues": "https://github.com/devvime/modpath-php/issues",
-                "source": "https://github.com/devvime/modpath-php/tree/v1.0.23"
+                "source": "https://github.com/devvime/modpath-php/tree/v1.0.27"
             },
-            "time": "2026-01-22T01:24:04+00:00"
+            "time": "2026-02-03T01:03:42+00:00"
         },
         {
             "name": "firebase/php-jwt",

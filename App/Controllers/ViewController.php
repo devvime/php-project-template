@@ -23,7 +23,7 @@ class ViewController
   #[Route(path: '/login', method: 'GET')]
   public function login($request, $response)
   {
-    $response->render('pages/login', []);
+    $response->render('pages/auth/login', []);
   }
 
   public function __destruct()

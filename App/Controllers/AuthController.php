@@ -4,8 +4,11 @@ namespace App\Controllers;
 
 use ModPath\Attribute\Route;
 use ModPath\Attribute\Controller;
+use ModPath\Attribute\Dto;
 use App\UseCases\Auth\Login;
 use App\UseCases\Auth\Register;
+use App\Validators\Auth\AuthDTO;
+use App\Validators\Auth\RegisterDTO;
 
 #[Controller(path: '/auth')]
 class AuthController
@@ -16,6 +19,7 @@ class AuthController
   ) {}
 
   #[Route(path: '/login', method: 'POST')]
+  #[Dto(AuthDTO::class)]
   public function login($request, $response)
   {
     $result = $this->login->execute((array)$request->body);
@@ -30,6 +34,7 @@ class AuthController
   }
 
   #[Route(path: '/register', method: 'POST')]
+  #[Dto(RegisterDTO::class)]
   public function register($request, $response)
   {
     $result = $this->register->execute($request->body);

@@ -20,7 +20,6 @@ export default function Register() {
       this.loading = true;
       const response = await axios.post('/auth/register', this.registerForm);
       if (response.data.success) {
-        this.displayLoginForm = true;
         this.loading = false;
         return Swal.fire({
           title: 'Success!',

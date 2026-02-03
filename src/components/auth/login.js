@@ -1,6 +1,6 @@
 export default function Login() {
   return {
-    displayLoginForm: true,
+    currentForm: 'login',
     loading: false,
     loginForm: {
       email: '',

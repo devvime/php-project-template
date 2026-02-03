@@ -19,7 +19,7 @@ export default function Login() {
       }
       this.loading = true;
       const response = await axios.post('/auth/login', this.loginForm);
-      if (response.data.token) {
+      if (response.data.success) {
         this.loading = false;
         return location.href = '/app';
       }

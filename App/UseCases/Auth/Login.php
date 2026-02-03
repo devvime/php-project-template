@@ -48,7 +48,8 @@ class Login
         ]);
         $_SESSION['user'] = $token;
         return [
-          "token" => $_SESSION['user']
+          "success" => true,
+          "message" => "Login successfully!"
         ];
       }
     } catch (DomainException $error) {
